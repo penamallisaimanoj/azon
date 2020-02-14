@@ -1,22 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import PersonCard from './PersonCard';
-import ItemDescription from './ItemDescription';
 import Cart from './Cart';
 import * as serviceWorker from './serviceWorker';
 
+var userInfo = {
+    name:"UserName",
+    age:99
+}
 var itemsList = [
     {
         name:"Item1",
-        cost:100
+        orderQuantity:1,
+        amount:100
     },
     {
         name:"Item2",
-        cost:200
+        orderQuantity:3,
+        amount:200
+    },
+    {
+        name:"Item3",
+        orderQuantity:5,
+        amount:300
     }
 ];
-ReactDOM.render(<Cart itemsList={itemsList} />, document.getElementById('root'));
+
+ReactDOM.render(<Cart userInfo={userInfo} itemsList={itemsList} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

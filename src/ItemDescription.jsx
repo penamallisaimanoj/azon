@@ -4,10 +4,12 @@ class ItemDescription extends Component{
     render(){
         return(
             <div>
-                <p>Name: {this.props.item.name}</p>
-                <p>Cost: {this.props.item.cost}</p>
+                <p>Item: {this.props.name}</p>
+                <p>Quantity: {this.props.orderQuantity}</p>
+                <p>Amount: {this.props.amount}</p>
             </div>
         );
     }
 }
+
 export default ItemDescription;
